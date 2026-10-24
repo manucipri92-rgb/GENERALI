@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="GENERALI"><meta name="theme-color" content="#a30b1d">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+<title>GENERALI</title>
+<style>
+:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--ink:#1d1d1f;--mut:#6e6e73;--g:#1f9d55;--y:#c98a00;--r:#d11a2a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background-color:#a30b1d;background-image:radial-gradient(circle at 10% 5%,rgba(215,70,60,.55),transparent 40%),radial-gradient(circle at 92% 22%,rgba(190,20,40,.6),transparent 38%),radial-gradient(circle at 60% 95%,rgba(70,0,10,.6),transparent 45%);background-attachment:fixed;color:var(--ink);font:15px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:16px}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:16px}
+.brand{color:#fff;font-family:"Source Serif 4",Georgia,"Times New Roman",serif;font-weight:600;font-size:30px;letter-spacing:-.03em}
+.glass{background:rgba(255,255,255,.74);-webkit-backdrop-filter:blur(24px) saturate(180%);backdrop-filter:blur(24px) saturate(180%);border:1px solid rgba(255,255,255,.85);box-shadow:0 8px 32px rgba(90,0,15,.22),inset 0 1px 0 rgba(255,255,255,.95);border-radius:24px;padding:18px;margin-bottom:16px}
+nav.glass{display:flex;gap:4px;padding:5px;margin:0 0 0 auto;border-radius:999px}
+nav button{border:0;background:transparent;padding:9px 12px;border-radius:999px;font-family:inherit;font-weight:600;font-size:14px;color:var(--mut);cursor:pointer;white-space:nowrap}
+nav button.on{background:#fff;color:var(--ink);box-shadow:0 2px 10px rgba(0,0,0,.15)}
+h1{font-size:26px;margin:0;color:#fff}h2{font-size:18px;margin:0 0 12px}
+.ph{display:flex;align-items:center;justify-content:space-between;margin:4px 2px 14px}
+.plus{width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.95);color:#a30b1d;font-size:30px;line-height:1;cursor:pointer;box-shadow:0 4px 16px rgba(90,0,15,.3)}
+.hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.hd h2{margin:0}.hd select{width:auto;padding:7px 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.kpi{border-radius:18px;padding:12px;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.9)}
+.kpi small{color:var(--mut);display:block}.kpi b{font-size:20px}
+.g{color:var(--g)}.y{color:var(--y)}.r{color:var(--r)}
+.bg{background:rgba(31,157,85,.15)}.by{background:rgba(217,154,0,.18)}.br{background:rgba(209,26,42,.14)}
+.sc{overflow-x:auto;margin-top:14px}
+table{width:100%;border-collapse:separate;border-spacing:0 6px;min-width:560px}
+th{font-size:12px;color:var(--mut);text-align:right;padding:4px 8px;font-weight:600}th:first-child,td:first-child{text-align:left}
+td{padding:9px 8px;text-align:right;background:rgba(255,255,255,.7);font-variant-numeric:tabular-nums}
+td:first-child{border-radius:12px 0 0 12px;font-weight:600}td:last-child{border-radius:0 12px 12px 0}
+tr.tot td{font-weight:700;background:rgba(255,255,255,.95)}
+tr.al td{background:rgba(209,26,42,.2)}tr.al td:nth-child(5){color:var(--r);font-weight:700}
+.sub{font-size:11px;color:var(--mut)}
+details summary{list-style:none;display:flex;justify-content:space-between;cursor:pointer;font-weight:700;font-size:17px}
+details summary::-webkit-details-marker{display:none}
+.sec{margin-top:14px}.sh{display:flex;justify-content:space-between;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--mut);border-bottom:1px solid rgba(0,0,0,.1);padding-bottom:4px}
+.r{display:grid;grid-template-columns:1fr auto auto auto;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.05)}
+.r small{color:var(--mut);display:block}.r select{width:auto;padding:6px}
+.ra{font-variant-numeric:tabular-nums;font-weight:600}
+input,select,button.pri{font:inherit;padding:11px 12px;border-radius:14px;border:1px solid rgba(0,0,0,.1);background:rgba(255,255,255,.9);width:100%}
+button.pri{background:#a30b1d;color:#fff;border:0;font-weight:600;cursor:pointer}button.pri.off{background:rgba(0,0,0,.08);color:var(--ink)}
+button.x{border:0;background:none;color:var(--r);cursor:pointer;font-size:15px;font-family:inherit}
+.empty{color:var(--mut);text-align:center;padding:22px}
+.ov{position:fixed;inset:0;background:rgba(70,0,10,.45);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:calc(16px + env(safe-area-inset-top,0px)) 16px calc(16px + env(safe-area-inset-bottom,0px));z-index:20}
+.ov .glass{width:100%;max-width:420px;margin:0;background:rgba(255,255,255,.92);max-height:100%;overflow:auto}
+form{display:grid;gap:10px}label{display:grid;gap:4px;font-size:12px;color:var(--mut)}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pr{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:16px}
+input,select{color:var(--ink);-webkit-text-fill-color:var(--ink)}option{color:var(--ink);background:#fff}
+input::placeholder{color:#8e8e93;-webkit-text-fill-color:#8e8e93}
+</style></head><body><div class="wrap">
+<header><div class="brand">GENERALI</div>
+<nav class="glass"><button data-p="dash">Dashboard</button><button data-p="vend">Vendite</button><button data-p="aff">Affiancamenti</button><button data-p="auto">Polizze auto</button></nav></header>
+<div id="app"></div></div>
+<script>
+const SEC=["ANNUI","PROTECTION","UNICI","DNA","DAS","TFR"];
+const GOAL={ANNUI:2400,PROTECTION:600,UNICI:15000,DNADAS:800};
+const MESI=["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"];
+const KW=[["TFR",["tfr"]],["DNA",["dna"]],["DAS",["das","tutela legale"]],["UNICI",["unico","unici","una tantum"]],["PROTECTION",["protection","tcm","temporanea","infortun","malattia","salute","ltc","long term","invalidit","vita","cpi","casa","famiglia","rc "]]];
+function guess(n){n=" "+n.toLowerCase()+" ";for(const[s,k]of KW)if(k.some(w=>n.includes(w)))return s;return"ANNUI"}
+let D={v:[],a:[],p:[]},page="dash",year=new Date().getFullYear(),modal=false;
+const openM=new Set();
+const nowKey=()=>{const n=new Date();return n.getFullYear()+"-"+String(n.getMonth()+1).padStart(2,"0")};
+openM.add("v"+nowKey());openM.add("a"+nowKey());
+try{const s=localStorage.getItem("cons1");if(s)D=Object.assign(D,JSON.parse(s))}catch(e){}
+function save(){try{localStorage.setItem("cons1",JSON.stringify(D))}catch(e){}}
+const E=n=>(n||0).toLocaleString("it-IT",{style:"currency",currency:"EUR",maximumFractionDigits:0});
+const today=()=>new Date().toLocaleDateString("sv-SE");
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const cls=(v,g)=>v>=g?"g":v>=g*.75?"y":"r";
+const bg=c=>({g:"bg",y:"by",r:"br"}[c]);
+const K=()=>({vend:"v",aff:"a",auto:"p"}[page]);
+const fd=d=>d.split("-").reverse().join("/");
+const pa=(n,per,v,g,x)=>`data-pop='${JSON.stringify([n,per,v,g,x||null])}' style="cursor:pointer"`;
+let popup=null;
+function popHtml(){const[n,per,v,g,x]=popup,d=v-g,c=d>=0?"g":cls(v,g);
+ return `<div class="ov" id="pov"><div class="glass"><h2>${n} · ${per}</h2><div class="pr"><span>Obiettivo</span><b>${E(g)}</b></div><div class="pr"><span>Fatto</span><b>${E(v)}</b></div><div class="pr"><span>${d>=0?"In più":"Manca"}</span><b class="${c}">${d>=0?"+":"-"}${E(Math.abs(d))}</b></div>${x?`<div class="pr"><span>DNA</span><b>${E(x[0])}</b></div><div class="pr"><span>DAS</span><b>${E(x[1])}</b></div>`:""}<button class="pri" id="pcx" style="margin-top:14px">Chiudi</button></div></div>`}
+function sums(list,pref){const t={};SEC.forEach(s=>t[s]=0);list.filter(x=>x.d.startsWith(pref)).forEach(x=>t[x.s]+=x.i);
+ t.DD=t.DNA+t.DAS;t.score=t.ANNUI+t.PROTECTION+t.DNA+t.DAS+t.UNICI*.1;return t}
+function dash(){const n=new Date(),cm=sums(D.v,nowKey());
+ const per0=MESI[n.getMonth()]+" "+n.getFullYear(),mk=(a,v,g,x)=>{const c=cls(v,g);return `<div class="kpi ${bg(c)}" ${pa(a,per0,v,g,x)}><small>${a}</small><b class="${c}">${E(v)}</b></div>`};
+ let h=`<div class="glass"><h2>${MESI[n.getMonth()]} ${n.getFullYear()}</h2><div class="grid">${mk("ANNUI",cm.ANNUI,GOAL.ANNUI)}${mk("PROTECTION",cm.PROTECTION,GOAL.PROTECTION)}${mk("UNICI",cm.UNICI,GOAL.UNICI)}${mk("DNA",cm.DD,GOAL.DNADAS,[cm.DNA,cm.DAS])}<div class="kpi"><small>Punteggio del mese</small><b>${E(cm.score)}</b></div></div></div>`;
+ const ys=new Set([year,n.getFullYear()]);D.v.forEach(x=>ys.add(+x.d.slice(0,4)));
+ const T=sums(D.v,String(year)),P=(a,b,g,x)=>`<div class="kpi" ${g?pa(a,String(year),b,g*12,x):""}><small>${a}</small><b>${E(b)}</b></div>`,Q=(a,v,g,x)=>`<td ${pa(a,String(year),v,g*12,x)}>${E(v)}</td>`;
+ h+=`<div class="glass"><div class="hd"><h2>Andamento</h2><select id="ys">${[...ys].sort().map(y=>`<option ${y==year?"selected":""}>${y}</option>`).join("")}</select></div><div class="grid">${P("ANNUI",T.ANNUI,GOAL.ANNUI)}${P("PROTECTION",T.PROTECTION,GOAL.PROTECTION)}${P("UNICI",T.UNICI,GOAL.UNICI)}${P("DNA",T.DD,GOAL.DNADAS,[T.DNA,T.DAS])}${P("TFR",T.TFR)}</div>
+ <div class="sc"><table><tr><th>Mese</th><th>ANNUI</th><th>PROTECTION</th><th>UNICI</th><th>DNA</th><th>PUNTEGGIO</th></tr>`;
+ MESI.forEach((m,i)=>{const t=sums(D.v,year+"-"+String(i+1).padStart(2,"0"));
+  const pm=m+" "+year,q=(a,v,g,x)=>`<td ${pa(a,pm,v,g,x)}>${E(v)}</td>`;h+=`<tr><td>${m}</td>${q("ANNUI",t.ANNUI,GOAL.ANNUI)}${q("PROTECTION",t.PROTECTION,GOAL.PROTECTION)}${q("UNICI",t.UNICI,GOAL.UNICI)}${q("DNA",t.DD,GOAL.DNADAS,[t.DNA,t.DAS])}<td><b>${E(t.score)}</b></td></tr>`});
+ return h+`<tr class="tot"><td>Totale</td>${Q("ANNUI",T.ANNUI,GOAL.ANNUI)}${Q("PROTECTION",T.PROTECTION,GOAL.PROTECTION)}${Q("UNICI",T.UNICI,GOAL.UNICI)}${Q("DNA",T.DD,GOAL.DNADAS,[T.DNA,T.DAS])}<td>${E(T.score)}</td></tr></table></div></div>`}
+function grouped(key,extra){const L=D[key];
+ if(!L.length)return `<div class="glass empty">Ancora nessun inserimento</div>`;
+ return [...new Set(L.map(x=>x.d.slice(0,7)))].sort().reverse().map(mk=>{
+  const it=L.filter(x=>x.d.startsWith(mk)),[y,m]=mk.split("-");
+  return `<details class="glass" data-k="${key+mk}" ${openM.has(key+mk)?"open":""}><summary><span>${MESI[+m-1]} ${y}</span><b>${E(it.reduce((a,x)=>a+x.i,0))}</b></summary>`+
+  SEC.filter(s=>it.some(x=>x.s===s)).map(s=>{const r=it.filter(x=>x.s===s).sort((a,b)=>b.d.localeCompare(a.d));
+   return `<div class="sec"><div class="sh"><span>${s}</span><span>${E(r.reduce((a,x)=>a+x.i,0))}</span></div>`+r.map(x=>`<div class="r"><div><b>${esc(x.n)}</b><small>${esc(x.cl)}${extra?" · "+esc(x.c):""} · ${fd(x.d)}</small></div><span class="ra">${E(x.i)}</span><select data-ch="${x.id}">${SEC.map(q=>`<option ${q==x.s?"selected":""}>${q}</option>`).join("")}</select><button class="x" data-del="${x.id}">✕</button></div>`).join("")+`</div>`}).join("")+`</details>`}).join("")}
+function listPage(key,title,extra){return `<div class="ph"><h1>${title}</h1><button class="plus" id="add">+</button></div>`+grouped(key,extra)}
+function addYears(d,n){const x=new Date(d);x.setFullYear(x.getFullYear()+n);return x}
+function autoPage(){const now=new Date(),lim=new Date(now);lim.setMonth(lim.getMonth()+2);
+ const L=D.p.map(x=>({...x,sc:addYears(x.d,1)})).sort((a,b)=>a.sc-b.sc);
+ let h=`<div class="ph"><h1>Polizze auto</h1><button class="plus" id="add">+</button></div>`;
+ if(!L.length)return h+`<div class="glass empty">Ancora nessuna polizza</div>`;
+ return h+`<div class="glass"><div class="sc" style="margin-top:0"><table><tr><th>Cliente</th><th>Targa</th><th>Compagnia</th><th>Decorrenza</th><th>Scadenza</th><th>Premio</th><th></th></tr>${L.map(x=>{const red=x.sc<=lim;return `<tr class="${red?"al":""}"><td>${esc(x.cl)}</td><td>${esc(x.t||"")}</td><td>${esc(x.co||"")}</td><td>${fd(x.d)}</td><td>${x.sc.toLocaleDateString("it-IT")}</td><td>${x.i?E(x.i):""}</td><td><button class="x" data-del="${x.id}">✕</button></td></tr>`}).join("")}</table></div></div>`}
+function formHtml(){const k=K(),t={v:"Nuova vendita",a:"Nuovo affiancamento",p:"Nuova polizza auto"}[k];
+ const f=k=="p"?`<input name="cl" placeholder="Cliente" required><input name="t" placeholder="Targa"><input name="co" placeholder="Compagnia"><label>Decorrenza<input name="d" type="date" value="${today()}" required></label><input name="i" type="number" step="0.01" min="0" placeholder="Premio €">`:
+ `<input name="n" placeholder="Nome prodotto" required><select name="s">${SEC.map(s=>`<option>${s}</option>`).join("")}</select>${k=="a"?`<input name="c" placeholder="Collaboratore affiancato" required>`:""}<input name="cl" placeholder="Nome cliente" required><label>Data<input name="d" type="date" value="${today()}" required></label><input name="i" type="number" step="0.01" min="0" placeholder="Importo €" required>`;
+ return `<div class="ov" id="ov"><div class="glass"><h2>${t}</h2><form id="f">${f}<div class="btns"><button type="button" class="pri off" id="cx">Annulla</button><button class="pri">Aggiungi</button></div></form></div></div>`}
+function render(){const k=K();
+ document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.p==page));
+ document.getElementById("app").innerHTML=(page=="dash"?dash():page=="auto"?autoPage():listPage(k,page=="vend"?"Vendite":"Affiancamenti",page=="aff"))+(modal?formHtml():"")+(popup?popHtml():"");
+ const ys=document.getElementById("ys");if(ys)ys.onchange=()=>{year=+ys.value;render()};
+ const add=document.getElementById("add");if(add)add.onclick=()=>{modal=true;render()};
+ document.querySelectorAll("[data-pop]").forEach(e=>e.onclick=()=>{popup=JSON.parse(e.dataset.pop);render()});
+ const pv=document.getElementById("pov");if(pv){const cp=()=>{popup=null;render()};document.getElementById("pcx").onclick=cp;pv.onclick=e=>{if(e.target===pv)cp()}}
+ document.querySelectorAll("details[data-k]").forEach(d=>d.ontoggle=()=>{d.open?openM.add(d.dataset.k):openM.delete(d.dataset.k)});
+ const f=document.getElementById("f");
+ if(f){const close=()=>{modal=false;render()};
+  document.getElementById("cx").onclick=close;const ov=document.getElementById("ov");ov.onclick=e=>{if(e.target===ov)close()};
+  const s=f.elements.s,n=f.elements.n;let manual=false;
+  if(s)s.onchange=()=>manual=true;if(n&&s)n.oninput=()=>{if(!manual)s.value=guess(n.value)};
+  f.onsubmit=e=>{e.preventDefault();const v=Object.fromEntries(new FormData(f));v.id=Date.now()+""+Math.random();v.i=parseFloat(v.i)||0;D[k].push(v);if(k!="p")openM.add(k+v.d.slice(0,7));save();modal=false;render()};
+  const first=f.querySelector("input");if(first)first.focus()}
+ document.querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>{if(b.dataset.arm){D[k]=D[k].filter(x=>x.id!=b.dataset.del);save();render()}else{b.dataset.arm=1;b.textContent="Elimina?";setTimeout(()=>{delete b.dataset.arm;b.textContent="✕"},3000)}});
+ document.querySelectorAll("[data-ch]").forEach(s=>s.onchange=()=>{const x=D[k].find(x=>x.id==s.dataset.ch);if(x){x.s=s.value;save();render()}})}
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{page=b.dataset.p;modal=false;render();window.scrollTo(0,0)});
+render();
+</script></body></html>
